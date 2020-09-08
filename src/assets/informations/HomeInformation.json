@@ -1,0 +1,29 @@
+{
+	"home":[
+		{
+			"image":"./images/articles/image-1.jpg",
+			"title":"Leon negro"
+		},{
+			"image":"./images/articles/image-2.jpg",
+			"title":"Manipulación del mono"
+		},{
+			"image":"./images/articles/image-3.jpg",
+			"title":"Dead Pool"
+		},{
+			"image":"./images/articles/image-4.jpg",
+			"title":"Caballeros del Zodiaco"
+		},{
+			"image":"./images/articles/image-1.jpg",
+			"title":"Leon negro"
+		},{
+			"image":"./images/articles/image-2.jpg",
+			"title":"Manipulación del mono"
+		},{
+			"image":"./images/articles/image-3.jpg",
+			"title":"Dead Pool"
+		},{
+			"image":"./images/articles/image-4.jpg",
+			"title":"Caballeros del Zodiaco"
+		}
+	]
+}
