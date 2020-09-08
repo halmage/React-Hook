@@ -1,0 +1,18 @@
+:root{
+	/* margenes */
+	--mg-width-image:100px;
+	--mg-height-image:100px; 
+}
+
+.home-image-style{
+	width: var(--mg-width-image);
+	height: var(--mg-height-image);
+	padding: 5px;
+	border-radius: 10px;
+	background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.home-form-style{
+	box-shadow: 1px 1px 1px black;
+}
