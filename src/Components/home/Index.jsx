@@ -1,5 +1,4 @@
 import React from 'react';
-
 /* Importando componentes */
 import HomeLog from './HomeLogo';
 import Header from '../header/Header';
