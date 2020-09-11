@@ -1,11 +1,12 @@
 import React from 'react';
 /* Importando componentes */
 import Index from '../../Components/profile/Index';
-const ProfilePresenter = (props) => {
-	const {onChange} = props;
+const ProfilePresenter = ({data, onChange}) => {
 	return(
 		<>
-			<Index onChange = {onChange}/>
+			<Index data = {data} 
+				   onChange = {onChange}
+			/>
 		</>
 	);
 }

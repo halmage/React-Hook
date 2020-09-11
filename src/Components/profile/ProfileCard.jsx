@@ -2,30 +2,24 @@ import React from 'react';
 /* importando estilos de css */
 import './Profile.css';
 
-const ProfileCard = () => {
+const ProfileCard = ({data}) => {
 	return(
 		<>
-			<div className="card Profile-Card-style">
-			  <img src={'./images/articles/image-1.jpg'} className="card-img-top" alt="..."/>
+			<div className="card profile-card-style">
+			  <img src={data.avatar} className="profile-card-image card-img-top" alt={data.avatar}/>
 			  <div className="card-body">
 			   	 <div className="row">
 			   	 	<div className="col-md-7">
-			   	 		<p>Nombre: Hugo Rafael Ali</p>
-			   	 		<p>Correo: hugo.zorrilla.93@gmail.com</p>
-			   	 		<p>Ciudad: Cumaná</p>			  			
+			   	 		<p>Nombre: {data.name}</p>
+			   	 		<p>Correo: {data.email}</p>
+			   	 		<p>Ciudad: {data.city}</p>			  			
 			   	 	</div>
 			   	 	<div className="col-md-5">
-			   	 		<p>Apellido: Zorrilla Garcia</p>
-			   	 		<p>Sexo: Masculino</p>
+			   	 		<p>Apellido: {data.last_name}</p>
+			   	 		<p>Sexo: {data.sex}</p>
 			   	 	</div>
 			   	 	<div className="col-md-12">
-			   	 		<p>Contenido: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
+			   	 		<p>Contenido: {data.content}</p>
 			   	 	</div>
 			   	 </div>
 			  </div>

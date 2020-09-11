@@ -21,7 +21,10 @@ const ProfileContainer = () => {
 	}
 
 	return (
-		<ProfilePresenter onChange = {handleChange}/>
+		<ProfilePresenter 
+			data = {data} 
+			onChange = {handleChange}
+		/>
 	);
 }
 export default ProfileContainer;

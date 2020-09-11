@@ -4,18 +4,18 @@ import Header from '../header/Header';
 import ProfileCard from './ProfileCard';
 import ProfileForm from './ProfileForm';
 
-const Index = (props) => {
-	const {onChange} = props;
+const Index = ({onChange, data}) => {
+	console.log(data);
 	return (
 		<>
 			<Header/>
 			<section className="container mt-5">
 				<div className="row">
 					<div className="col-md-5">
-						<ProfileCard/>
+						<ProfileCard data = {data}/>
 					</div>
 					<div className="col-md-7">
-						<ProfileForm onChange = {onChange} />
+						<ProfileForm data = {data} onChange = {onChange} />
 					</div>
 				</div>
 			</section>
