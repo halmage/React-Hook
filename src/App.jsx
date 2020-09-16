@@ -11,6 +11,7 @@ const App = () => {
     		<Route exact path="/" component={HomeContainer}/>
     		<Route exact path="/Perfil" component={ProfileContainer}/>
     	</Switch>
+
     </BrowserRouter>
   );
 }

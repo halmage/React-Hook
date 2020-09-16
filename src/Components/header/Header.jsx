@@ -12,8 +12,8 @@ const Header = () =>{
 						</li>
 						<li className="nav-item">
 							<Link className="nav-link" to="/Perfil">Perfil</Link>
-						</li>
-					</ul>					
+						</li>							
+					</ul>
 				</div>
 			</nav>
 		</Fragment>

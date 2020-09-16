@@ -1,6 +1,6 @@
 import React from 'react';
 /* Importando componentes */
-import HomeLog from './HomeLogo';
+import HomeLogo from './HomeLogo';
 import Header from '../header/Header';
 import HomeListImages from './HomeListImages'
 import HomeFormSearch from './HomeFormSearch';
@@ -12,7 +12,7 @@ const Index = (props) => {
 			<section className="container mt-5">
 				<div className="row">
 					<div className="col-md-12">
-						<HomeLog/>
+						<HomeLogo/>
 					</div>
 					<div className="col-sm-8 offset-2">
 						<HomeFormSearch/>

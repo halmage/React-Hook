@@ -3,27 +3,20 @@ import React,{useState} from 'react';
 import ProfilePresenter from '../presenter/ProfilePresenter';
 
 const ProfileContainer = () => {
-	const [data,setData] = useState({
-			avatar:'',
-			name:'',
-			last_name:'',
-			email:'',
-			sex:'',
-			city:'',
-			content:''
-		});
-
-	const handleChange = (e) => {
-		setData({
-			...data,
-			[e.target.name]:e.target.value
-		})
+	const [entrada,setEntrada] = useState([]);
+		
+	const handleSubmit = (data,e) => {
+		setEntrada([
+			...entrada,
+				data
+		]);
+		e.target.reset();
 	}
 
 	return (
-		<ProfilePresenter 
-			data = {data} 
-			onChange = {handleChange}
+		<ProfilePresenter
+			data = {entrada}			
+			onSubmit = {handleSubmit}
 		/>
 	);
 }

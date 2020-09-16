@@ -1,11 +1,12 @@
 import React from 'react';
 /* Importando componentes */
 import Index from '../../Components/profile/Index';
-const ProfilePresenter = ({data, onChange}) => {
+const ProfilePresenter = ({data, onSubmit}) => {
 	return(
 		<>
-			<Index data = {data} 
-				   onChange = {onChange}
+			<Index 
+				data = {data} 
+				onSubmit = {onSubmit}
 			/>
 		</>
 	);
