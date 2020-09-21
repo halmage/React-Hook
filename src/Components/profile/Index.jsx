@@ -4,12 +4,11 @@ import Header from '../header/Header';
 import ProfileForm from './ProfileForm';
 import ProfileListCard from './ProfileListCard';
 
-const Index = ({onSubmit, data}) => {
-
+const Index = ({data, onSubmit, onClickUpdate, onClickDelete}) => {
 	return (
 		<>
 			<Header/>
-			<section className="container mt-5">
+			<section className="container p-5">
 				<div className="row">
 					<div className="col-md-12 d-flex justify-content-center">		
 						<div className="col-md-7">
@@ -19,11 +18,11 @@ const Index = ({onSubmit, data}) => {
 						</div>
 					</div>														
 				</div>
-				<div className="row">
-					<div className="col-md-6 mt-5">
-						<ProfileListCard data = {data}/>
-					</div>
-
+				<div className="row mt-5">
+						<ProfileListCard data = {data}
+										 onClickUpdate = {onClickUpdate} 
+										 onClickDelete = {onClickDelete}
+						/>
 				</div>
 			</section>
 		</>

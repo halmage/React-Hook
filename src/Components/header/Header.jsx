@@ -1,5 +1,7 @@
 import React,{Fragment} from 'react';
 import {Link} from 'react-router-dom';
+/* Importando estilos de css */
+import './Header.css';
 
 const Header = () =>{
 	return(
