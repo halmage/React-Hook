@@ -6,8 +6,23 @@ import ProfilePresenter from '../presenter/ProfilePresenter';
 
 const ProfileContainer = () => {
 	const [users,setUsers] = useState([]);
+	const [editing,setEditing] = useState(false);
+	const [editUser,setEditUser] = useState({
+		id: null, avatar: '', name: '', last_name: '',
+		email: '', sex: '', city: '', content: ''
+	});
+
+	const updatedUser = (user) => {
+		console.log(user);
+		setEditing(true);
+		setEditUser({
+			id: user.id, avatar: user.avatar, name: user.name, 
+			last_name: user.last_name, email: user.email, sex: user.sex, 
+			city: user.city, content: user.content	
+		})
+	}
 		
-	const handleSubmit = (data,e) => {
+	const handleAddSubmit = (data,e) => {
 		data.id = uuidv4();
 		setUsers([
 			...users,
@@ -16,20 +31,24 @@ const ProfileContainer = () => {
 		e.target.reset();
 	}
 
-	const handleClickUpdate = (id) => {
-		console.log(id);
+	const handleEditSubmit = (data) => {
+		setEditing(false);
+		console.log(data.id);
+		setUsers(users.map(user => (user.id === data.id ? data : user)));
 	}
 
-	const handleClickDelete = (id) => {			
-		console.log(id);
+	const handleClickDelete = (id) => {	
 		setUsers(users.filter(user => user.id !== id));
 	}
 
 	return (
 		<ProfilePresenter
-			data = {users}			
-			onSubmit = {handleSubmit}
-			onClickUpdate = {handleClickUpdate}
+			data = {users}		
+			editing = {editing}	
+			editUser = {editUser}
+			updatedUser = {updatedUser}
+			onAddSubmit = {handleAddSubmit}
+			onEditSubmit = {handleEditSubmit}
 			onClickDelete = {handleClickDelete}
 		/>
 	);

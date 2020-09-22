@@ -2,7 +2,7 @@ import React from 'react';
 /* importando estilos de css */
 import './Profile.css';
 
-const ProfileListCard = ({data,onClickUpdate,onClickDelete}) => {	
+const ProfileListCard = ({data,updatedUser,onClickDelete}) => {	
 	return(
 		<>
 		{
@@ -27,7 +27,7 @@ const ProfileListCard = ({data,onClickUpdate,onClickDelete}) => {
 									</div>
 								</div>
 								<div className="d-flex justify-content-center">	
-									<button type="button" className="btn btn-warning mr-1" onClick={() => onClickUpdate(d.id)}>
+									<button type="button" className="btn btn-warning mr-1" onClick={() => updatedUser(d)}>
 										editar
 									</button>
 									<button type="button" className="btn btn-danger" onClick={() => onClickDelete(d.id)}>
