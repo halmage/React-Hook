@@ -2,35 +2,35 @@ import React from 'react';
 /* importando estilos de css */
 import './Profile.css';
 
-const ProfileListCard = ({data,updatedUser,onClickDelete}) => {	
+const ProfileListCard = ({users,editUser,onClickDelete}) => {
 	return(
 		<>
 		{
-			data.map((d,i) => {
+			users.map((user) => {
 				return(
-					<div key={i} className="col-md-6 mt-5">
+					<div key={user.id} className="col-md-6 mt-5">
 						<div className="card profile-card-style">
-							<img src={d.avatar} className="profile-card-image card-img-top" alt={d.avatar}/>
+							<img src={user.avatar} className="profile-card-image card-img-top" alt={user.avatar}/>
 							<div className="card-body">
 								<div className="row">
 									<div className="col-md-7">
-										<p>Nombre: {d.name}</p>
-										<p>Correo: {d.email}</p>
-										<p>Ciudad: {d.city}</p>
+										<p>Nombre: {user.name}</p>
+										<p>Correo: {user.email}</p>
+										<p>Ciudad: {user.city}</p>
 									</div>
 									<div className="col-md-5">
-										<p>Apellido: {d.last_name}</p>
-										<p>Sexo: {d.sex}</p>
+										<p>Apellido: {user.last_name}</p>
+										<p>Sexo: {user.sex}</p>
 									</div>
 									<div className="col-md-12">
-										<p>Contenido: {d.content}</p>
+										<p>Contenido: {user.content}</p>								
 									</div>
 								</div>
 								<div className="d-flex justify-content-center">	
-									<button type="button" className="btn btn-warning mr-1" onClick={() => updatedUser(d)}>
+									<button type="button" className="btn btn-warning mr-1" onClick={() => editUser(user)}>
 										editar
 									</button>
-									<button type="button" className="btn btn-danger" onClick={() => onClickDelete(d.id)}>
+									<button type="button" className="btn btn-danger" onClick={() => onClickDelete(user.id)}>
 										eliminar
 									</button>
 								</div>

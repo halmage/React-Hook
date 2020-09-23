@@ -5,7 +5,7 @@ import ProfileAddForm from './ProfileAddForm';
 import ProfileEditForm from './ProfileEditForm';
 import ProfileListCard from './ProfileListCard';
 
-const Index = ({data,editing,editUser,updatedUser,onAddSubmit,onEditSubmit,onClickDelete}) => {	
+const Index = ({users,editing,currentUser,editUser,onAddSubmit,onUpdateSubmit,onClickDelete}) => {	
 	return (
 		<>
 			<Header/>
@@ -17,15 +17,13 @@ const Index = ({data,editing,editUser,updatedUser,onAddSubmit,onEditSubmit,onCli
 						editing ? (
 							<>
 							<ProfileEditForm 
-											 editUser = {editUser}
-										 	 onEditSubmit = {onEditSubmit}							
+											 currentUser = {currentUser}
+										 	 onUpdateSubmit = {onUpdateSubmit}							
 							/>
 							</>
 							): (
 							<>
-							<ProfileAddForm data = {data} 
-										 onAddSubmit = {onAddSubmit}
-							/>
+							<ProfileAddForm onAddSubmit = {onAddSubmit}/>
 							</>
 							)
 							
@@ -34,8 +32,8 @@ const Index = ({data,editing,editUser,updatedUser,onAddSubmit,onEditSubmit,onCli
 					</div>														
 				</div>
 				<div className="row mt-5">
-						<ProfileListCard data = {data}
-										 updatedUser = {updatedUser}
+						<ProfileListCard users = {users}
+										 editUser = {editUser}
 										 onClickDelete = {onClickDelete}
 						/>
 				</div>

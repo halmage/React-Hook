@@ -1,16 +1,16 @@
 import React from 'react';
 /* Importando componentes */
 import Index from '../../Components/profile/Index';
-const ProfilePresenter = ({data,editing,editUser,updatedUser,onAddSubmit,onEditSubmit,onClickDelete}) => {
+const ProfilePresenter = ({users,editing,currentUser,editUser,onAddSubmit,onUpdateSubmit,onClickDelete}) => {
 	return(
 		<>
 			<Index 
-				data = {data} 
+				users = {users} 
 				editing = {editing}
 				editUser = {editUser}
-				updatedUser = {updatedUser}
+				currentUser = {currentUser}
 				onAddSubmit = {onAddSubmit}
-				onEditSubmit = {onEditSubmit}
+				onUpdateSubmit = {onUpdateSubmit}
 				onClickDelete = {onClickDelete}
 			/>
 		</>

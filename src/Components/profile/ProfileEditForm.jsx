@@ -3,24 +3,23 @@ import {useForm} from 'react-hook-form';
 /* importando estilos de css */
 import './Profile.css';
 
-const ProfileEditForm = ({editUser,onEditSubmit}) => {
+const ProfileEditForm = ({currentUser,onUpdateSubmit}) => {
 	const {register, errors, handleSubmit,setValue} = useForm({
-		defaultValues: editUser
+		defaultValues: currentUser
 	});
 
-	setValue('id',editUser.id);
-	setValue('avatar',editUser.avatar);
-	setValue('name',editUser.name);
-	setValue('last_name',editUser.last_name);
-	setValue('email',editUser.email);
-	setValue('sex',editUser.sex);
-	setValue('city',editUser.city);
-	setValue('content',editUser.content);
+	setValue('id',currentUser.id);
+	setValue('avatar',currentUser.avatar);
+	setValue('name',currentUser.name);
+	setValue('last_name',currentUser.last_name);
+	setValue('email',currentUser.email);
+	setValue('sex',currentUser.sex);
+	setValue('city',currentUser.city);
+	setValue('content',currentUser.content);
 
 	return(
 		<>
-			<p>{editUser.id}</p>
-			<form onSubmit={handleSubmit(onEditSubmit)}>
+			<form onSubmit={handleSubmit(onUpdateSubmit)}>
 				<div className="form-group">
 					<label className="profile-form-label">Avatar</label>
 					<input type="text" 
@@ -137,13 +136,6 @@ const ProfileEditForm = ({editUser,onEditSubmit}) => {
                     		{errors?.content?.message}
                 	</span>
 				</div>				
-				<input type="hidden" name="id" value={editUser.id}
-						ref={
-		                      register({
-		                            required: {value:true, message: 'Ingrese un contenido'}
-		                      })
-			        	} 
-			     />
 				<button type="submit" className="btn btn-primary profile-form-button btn-block">editar usuario</button>
 			</form>
 		</>
