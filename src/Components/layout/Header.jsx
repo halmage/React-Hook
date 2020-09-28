@@ -1,19 +1,20 @@
 import React,{Fragment} from 'react';
 import {Link} from 'react-router-dom';
-/* Importando estilos de css */
-import './Header.css';
 
 const Header = () =>{
 	return(
 		<Fragment>
-			<nav className="navbar navbar-expand-lg navbar-light bg-light">
-				<div className="collapse navbar-collapse container" id="navbarSupportedContent">
+			<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+				<div className="container collapse navbar-collapse container" id="navbarSupportedContent">
 					<ul className="navbar-nav mr-auto">
 						<li className="nav-item">
 							<Link className="nav-link" to="/">Home</Link>
 						</li>
 						<li className="nav-item">
 							<Link className="nav-link" to="/Perfil">Perfil</Link>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to="/Billetera">Billetera</Link>
 						</li>							
 					</ul>
 				</div>

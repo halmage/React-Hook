@@ -1,6 +1,4 @@
 import React from 'react';
-/* Importando estilos de css */
-import './Home.css';
 
 const HomeFormSearch = () => {
 	return(

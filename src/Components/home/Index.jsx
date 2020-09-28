@@ -1,9 +1,11 @@
 import React from 'react';
 /* Importando componentes */
 import HomeLogo from './HomeLogo';
-import Header from '../header/Header';
+import Header from '../layout/Header';
 import HomeListImages from './HomeListImages'
 import HomeFormSearch from './HomeFormSearch';
+/* Importando estilos de css */
+import '../../assets/sass/main.css';
 
 const Index = (props) => {		
 	return(

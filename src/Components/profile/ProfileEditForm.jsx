@@ -1,7 +1,5 @@
 import React from 'react';
 import {useForm} from 'react-hook-form';
-/* importando estilos de css */
-import './Profile.css';
 
 const ProfileEditForm = ({currentUser,onUpdateSubmit}) => {
 	const {register, errors, handleSubmit,setValue} = useForm({
@@ -136,7 +134,7 @@ const ProfileEditForm = ({currentUser,onUpdateSubmit}) => {
                     		{errors?.content?.message}
                 	</span>
 				</div>				
-				<button type="submit" className="btn btn-primary profile-form-button btn-block">editar usuario</button>
+				<button type="submit" className="btn btn-dark profile-form-button btn-block">editar usuario</button>
 			</form>
 		</>
 	);

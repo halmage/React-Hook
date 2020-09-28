@@ -1,9 +1,11 @@
 import React from 'react';
 /* Impartando compentes */
-import Header from '../header/Header';
+import Header from '../layout/Header';
 import ProfileAddForm from './ProfileAddForm';
 import ProfileEditForm from './ProfileEditForm';
 import ProfileListCard from './ProfileListCard';
+/* Importando estilos de css */
+import '../../assets/sass/main.css';
 
 const Index = ({users,editing,currentUser,editUser,onAddSubmit,onUpdateSubmit,onClickDelete}) => {	
 	return (
@@ -14,17 +16,23 @@ const Index = ({users,editing,currentUser,editUser,onAddSubmit,onUpdateSubmit,on
 					<div className="col-md-12 d-flex justify-content-center">		
 						<div className="col-md-7">
 						{
-						editing ? (
-							<>
-							<ProfileEditForm 
-											 currentUser = {currentUser}
-										 	 onUpdateSubmit = {onUpdateSubmit}							
-							/>
-							</>
-							): (
-							<>
-							<ProfileAddForm onAddSubmit = {onAddSubmit}/>
-							</>
+							editing ? (
+								<>
+									<ProfileEditForm currentUser = {currentUser}
+												 	 onUpdateSubmit = {onUpdateSubmit}							
+									/>
+								</>
+								): (
+								<>
+									<div className="card">
+										<div className="card-header bg-dark text-light">
+											<h2 className="lead">Formulario de perfil</h2>
+										</div>
+										<div className="card-body">
+											<ProfileAddForm onAddSubmit = {onAddSubmit}/>
+										</div>
+									</div>
+								</>
 							)
 							
 						}

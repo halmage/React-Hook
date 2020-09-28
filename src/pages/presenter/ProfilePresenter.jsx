@@ -1,7 +1,7 @@
 import React from 'react';
 /* Importando componentes */
 import Index from '../../Components/profile/Index';
-const ProfilePresenter = ({users,editing,currentUser,editUser,onAddSubmit,onUpdateSubmit,onClickDelete}) => {
+const ProfilePresenter = ({users,editing,editUser,currentUser,onAddSubmit,onUpdateSubmit,onClickDelete}) => {
 	return(
 		<>
 			<Index 

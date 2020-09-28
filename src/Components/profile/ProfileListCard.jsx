@@ -1,6 +1,4 @@
 import React from 'react';
-/* importando estilos de css */
-import './Profile.css';
 
 const ProfileListCard = ({users,editUser,onClickDelete}) => {
 	return(
