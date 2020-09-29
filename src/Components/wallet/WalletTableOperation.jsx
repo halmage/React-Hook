@@ -23,5 +23,4 @@ const WalletTableOperation = ({wallet}) => {
     </>
   )
 }
-
 export default WalletTableOperation;

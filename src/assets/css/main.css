@@ -85,6 +85,11 @@ form label {
   text-align: center;
 }
 
+.card-image-style {
+  width: 315px;
+  height: 300px;
+}
+
 /* Importando estilos de la carpeta layout */
 nav {
   /* Estilos del nav */

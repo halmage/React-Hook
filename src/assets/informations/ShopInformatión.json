@@ -1,0 +1,35 @@
+{
+	"shop":[
+		{
+			"price":"2500",
+			"image":"./images/shop/article-1.jpg",
+			"title":"disco de rueda",
+			"content":"juegos para niños"
+		},{
+			"price":"3000",
+			"image":"./images/shop/article-2.jpg",
+			"title":"muñeca de bebe",
+			"content":"juegos para niñas"
+		},{
+			"price":"3500",
+			"image":"./images/shop/article-3.jpg",
+			"title":"bestido de mujer",
+			"content":"bestimenta para mujeres"
+		},{
+			"price":"4000",
+			"image":"./images/shop/article-4.jpg",
+			"title":"chaqueta negra",
+			"content":"bestimenta para hombres"
+		},{
+			"price":"4500",
+			"image":"./images/shop/article-5.jpg",
+			"title":"balón de futbol",
+			"content":"juego de niños"
+		},{
+			"price":"5000",
+			"image":"./images/shop/article-6.jpg",
+			"title":"guantes de arqueria",
+			"content":"juego de niños"
+		}
+	]
+}
