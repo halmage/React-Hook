@@ -5,7 +5,7 @@ import ProfileAddForm from './ProfileAddForm';
 import ProfileEditForm from './ProfileEditForm';
 import ProfileListCard from './ProfileListCard';
 /* Importando estilos de css */
-import '../../assets/sass/main.css';
+import '../../assets/css/main.css';
 
 const Index = ({users,editing,currentUser,editUser,onAddSubmit,onUpdateSubmit,onClickDelete}) => {	
 	return (

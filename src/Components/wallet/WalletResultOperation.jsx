@@ -1,9 +1,9 @@
 import React from 'react';
 
-const WalletResultOperation = ({wallet}) => {
+const WalletResultOperation = ({result}) => {
   return (
     <>
-    	<h1 className="text-primary text-center display-1">3000$</h1>
+    	<h1 className="text-primary text-center display-1">{result}$</h1>
     </>
   )
 }

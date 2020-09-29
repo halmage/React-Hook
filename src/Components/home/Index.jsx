@@ -5,7 +5,7 @@ import Header from '../layout/Header';
 import HomeListImages from './HomeListImages'
 import HomeFormSearch from './HomeFormSearch';
 /* Importando estilos de css */
-import '../../assets/sass/main.css';
+import '../../assets/css/main.css';
 
 const Index = (props) => {		
 	return(
