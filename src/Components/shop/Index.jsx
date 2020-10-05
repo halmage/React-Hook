@@ -2,10 +2,11 @@ import React from 'react';
 /* Importando componentes */
 import Header from '../layout/Header';
 import ShopListArticle from './ShopListArticle';
+import ShopTrolleyArticle from './ShopTrolleyArticle';
 /* Importando estilos de css */
 import '../../assets/css/main.css';
 
-const index = ({ShopInformation}) => {  
+const index = ({ShopInformation,trolley,price,onClick,onClickDeleted}) => {  
   return (
     <>
     	<Header/>
@@ -17,11 +18,19 @@ const index = ({ShopInformation}) => {
     						<span>Tienda venezuela</span>
     					</div>
     					<div className="card-body">
-                            <ShopListArticle ShopInformation={ShopInformation}/>
+                            <ShopListArticle 
+                                onClick={onClick}
+                                ShopInformation={ShopInformation}
+                            />
     					</div>
     				</div>
     			</div>
     			<div className="col-md-4">
+                    <ShopTrolleyArticle 
+                        price={price}
+                        trolley={trolley}
+                        onClickDeleted={onClickDeleted}
+                    />
     			</div>
     		</div>    		
     	</section>

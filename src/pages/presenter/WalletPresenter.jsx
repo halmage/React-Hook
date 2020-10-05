@@ -2,7 +2,7 @@ import React from 'react';
 /* Importando componentes */
 import Index from '../../Components/wallet/Index';
 
-const WalletPresenter = ({wallet,result,onSubmit}) => {
+const WalletPresenter = ({wallet,trolley,result,onSubmit}) => {
 	return (
 		<>
 			<Index

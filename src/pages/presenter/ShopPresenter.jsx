@@ -2,10 +2,16 @@ import React from 'react';
 /* Importando componentes */
 import Index from '../../Components/shop/Index';
 
-const ShopPresenter = ({ShopInformation}) => {
+const ShopPresenter = ({ShopInformation,trolley,price,onClick,onClickDeleted}) => {
   return (
     <>
-    	<Index ShopInformation = {ShopInformation}/>
+    	<Index 
+    		trolley = {trolley}
+    		price = {price}
+    		onClick = {onClick}
+            onClickDeleted = {onClickDeleted}
+    		ShopInformation = {ShopInformation}
+    	/>
     </>
   )
 }
