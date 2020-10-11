@@ -1,6 +1,6 @@
 import React from 'react';
 
-const KanbanListTask = ({kanban}) => {
+const KanbanListTask = ({kanban,onSubmitDeleted,editKanban}) => {
   return (
     <>
     	<div className="row">
@@ -8,7 +8,7 @@ const KanbanListTask = ({kanban}) => {
 	    		kanban.map((k)=>{
 	    			return(
 	    				<div className="col-md-6">
-		    				<div className="card">
+		    				<div className="card mt-2">
 		    					<div className="card-header bg-dark text-light text-center">
 		    						<span>{k.title}</span>
 		    					</div>
@@ -24,6 +24,12 @@ const KanbanListTask = ({kanban}) => {
 		    						</span>
 		    						</p>
 		    						<p><b>Autor:</b> {k.user}</p>
+		    					</div>
+		    					<div className="card-footer">
+		    						<div className="d-flex justify-content-center">
+		    							<button className="btn btn-warning mx-2" onClick={()=>editKanban(k)}>actualizar</button>
+		    							<button className="btn btn-danger" onClick={()=>onSubmitDeleted(k)}>eliminar</button>
+		    						</div>
 		    					</div>
 		    				</div>
 	    				</div>

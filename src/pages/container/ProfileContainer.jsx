@@ -11,15 +11,6 @@ const ProfileContainer = () => {
 		email: '', sex: '', city: '', content: ''
 	});
 
-	const editUser = (user) => {
-		setEditing(true);
-		setCurrentUser({
-			id: user.id, avatar: user.avatar, name: user.name, 
-			last_name: user.last_name, email: user.email, sex: user.sex, 
-			city: user.city, content: user.content	
-		})
-	}	
-		
 	const handleAddSubmit = (data,e) => {
 		data.id = uuidv4();
 		setUsers([
@@ -29,6 +20,15 @@ const ProfileContainer = () => {
 		e.target.reset();
 	}
 
+	const editUser = (user) => {
+		setEditing(true);
+		setCurrentUser({
+			id: user.id, avatar: user.avatar, name: user.name, 
+			last_name: user.last_name, email: user.email, sex: user.sex, 
+			city: user.city, content: user.content	
+		})
+	}	
+	
 	const updateUser = (id,data) => {
 		setEditing(false);
 		setUsers(users.map(user => user.id === id ? data : user));

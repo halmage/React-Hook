@@ -2,12 +2,17 @@ import React from 'react';
 /* Importando componentes */
 import Index from '../../Components/kanban/Index';
 
-const KanbanPresenter = ({onSubmit,kanban}) => {
+const KanbanPresenter = ({kanban, editing, onSubmit, editKanban, currentKanban, onSubmitUpdate, onSubmitDeleted}) => {
   return (
     <>
     	<Index
-    		kanban={kanban}
-    		onSubmit={onSubmit}    		
+    		kanban={kanban} 
+        	editing={editing}
+   			onSubmit={onSubmit}
+	        editKanban={editKanban}
+	        currentKanban={currentKanban}
+	        onSubmitUpdate={onSubmitUpdate}
+	        onSubmitDeleted = {onSubmitDeleted}	
     	/>
     </>
   )
