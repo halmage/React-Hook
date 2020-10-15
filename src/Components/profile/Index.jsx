@@ -40,9 +40,10 @@ const Index = ({users,editing,currentUser,editUser,onAddSubmit,onUpdateSubmit,on
 					</div>														
 				</div>
 				<div className="row mt-5">
-						<ProfileListCard users = {users}
-										 editUser = {editUser}
-										 onClickDelete = {onClickDelete}
+						<ProfileListCard 
+							users = {users}
+							editUser = {editUser}
+							onClickDelete = {onClickDelete}
 						/>
 				</div>
 			</section>

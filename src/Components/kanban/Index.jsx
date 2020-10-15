@@ -1,11 +1,14 @@
 import React from 'react';
 /* Importando componentes */
 import Header from '../layout/Header';
-import KanbanForm from './KanbanForm';
-import KanbanFormEdit from './KanbanFormEdit';
+import KanbanAddForm from './KanbanAddForm';
+import KanbanEditForm from './KanbanEditForm';
 import KanbanListTask from './KanbanListTask';
 
-const Index = ({onSubmit,onSubmitDeleted,kanban,editing,editKanban,currentKanban,onSubmitUpdate}) => {
+/* Importando estilos de css */
+import '../../assets/css/main.css';
+
+const Index = ({kanban,editing,currentKanban,editKanban,onAddSubmit,onUpdateSubmit,onClickDelete}) => {
   return (
     <>
     	<Header/>
@@ -15,14 +18,14 @@ const Index = ({onSubmit,onSubmitDeleted,kanban,editing,editKanban,currentKanban
                     {
                         editing ? (
                             <>
-                                <KanbanFormEdit 
+                                <KanbanEditForm 
                                     currentKanban = {currentKanban} 
-                                    onSubmitUpdate = {onSubmitUpdate}
+                                    onUpdateSubmit = {onUpdateSubmit}
                                 />
                             </>
                         ):(
                             <>
-    				            <KanbanForm onSubmit={onSubmit}/>
+    				            <KanbanAddForm onAddSubmit={onAddSubmit}/>
                             </>
                         )
                     }
@@ -31,7 +34,7 @@ const Index = ({onSubmit,onSubmitDeleted,kanban,editing,editKanban,currentKanban
                     <KanbanListTask 
                         kanban={kanban}
                         editKanban = {editKanban}
-                        onSubmitDeleted={onSubmitDeleted}
+                        onClickDelete={onClickDelete}
                     />
     			</div>
     		</div>

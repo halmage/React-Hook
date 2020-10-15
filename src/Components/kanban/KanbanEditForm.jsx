@@ -1,7 +1,7 @@
 import React from 'react';
 import {useForm} from 'react-hook-form';
 
-const KanbanFormEdit = ({onSubmitUpdate, currentKanban}) => {
+const KanbanEditForm = ({currentKanban,onUpdateSubmit}) => {
   const {register, errors, handleSubmit,setValue} = useForm({
 		defaultValues: currentKanban
   });
@@ -19,7 +19,7 @@ const KanbanFormEdit = ({onSubmitUpdate, currentKanban}) => {
     			<span className="text-uppercase">formulario de kanban</span>
     		</div>
     		<div className="card-body">
-		    	<form onSubmit={handleSubmit(onSubmitUpdate)}>
+		    	<form onSubmit={handleSubmit(onUpdateSubmit)}>
 				  <div class="form-group">
 				    <label>Ingrese titulo</label>
 				    <input type="text" 
@@ -100,4 +100,4 @@ const KanbanFormEdit = ({onSubmitUpdate, currentKanban}) => {
     </>
   )
 }
-export default KanbanFormEdit;
+export default KanbanEditForm;

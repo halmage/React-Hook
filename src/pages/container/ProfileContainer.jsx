@@ -30,6 +30,8 @@ const ProfileContainer = () => {
 	}	
 	
 	const updateUser = (id,data) => {
+		console.log(data);
+    	console.log(id);
 		setEditing(false);
 		setUsers(users.map(user => user.id === id ? data : user));
 	}

@@ -10,7 +10,7 @@ const KanbanContainer = () => {
     id:'', title:'', content:'', priority:'', user:'' 
   });
 
-  const handleSubmit = (data,e) => {
+  const handleAddSubmit = (data,e) => {
       data.id = uuidv4();
       setKanban([
         ...kanban,
@@ -27,16 +27,18 @@ const KanbanContainer = () => {
   }
 
   const updateKanban = (id,data) => {
+    console.log(data);
+    console.log(id);
     setEditing(false);
     setKanban(kanban.map(k => k.id === id ? data : kanban));
-  }
+  } 
 
   const handleUpdateSubmit = (data) => {
     data.id = currentKanban.id;
     updateKanban(currentKanban.id,data);
   }  
 
-  const handleClickDeleted = (data) => {
+  const handleClickDelete = (data) => {
     setKanban(kanban.filter(k => k.id !== data.id)); 
   }
 
@@ -46,10 +48,10 @@ const KanbanContainer = () => {
         kanban={kanban} 
         editing={editing}
         editKanban={editKanban}
-   			onSubmit={handleSubmit}
         currentKanban={currentKanban}
-        onSubmitUpdate={handleUpdateSubmit}
-        onSubmitDeleted = {handleClickDeleted}
+   			onAddSubmit={handleAddSubmit}
+        onClickDelete = {handleClickDelete}
+        onUpdateSubmit={handleUpdateSubmit}
    		/>
     </>
   )
