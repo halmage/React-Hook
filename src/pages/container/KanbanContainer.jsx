@@ -27,10 +27,8 @@ const KanbanContainer = () => {
   }
 
   const updateKanban = (id,data) => {
-    console.log(data);
-    console.log(id);
     setEditing(false);
-    setKanban(kanban.map(k => k.id === id ? data : kanban));
+    setKanban(kanban.map(k => k.id === id ? data : k));
   } 
 
   const handleUpdateSubmit = (data) => {
