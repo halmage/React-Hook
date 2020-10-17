@@ -5,7 +5,7 @@ import CalculatorListOperation from './CalculatorListOperation';
 const CalculatorTableOperation = ({math}) => {
   return (
     <>
-    	<table class="table table-striped text-center">
+    	<table className="table table-striped text-center">
 			<thead>
 				<tr>
 					<th>numero1</th>

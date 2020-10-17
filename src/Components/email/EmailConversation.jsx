@@ -12,12 +12,12 @@ const EmailConversation = ({email,emailInformation}) => {
 	    			email.map((e) => {	    	
 	    				return(
 	    					<>		
-					    		<div key={e.id} className="row my-2">
+					    		<div className="row my-2">
 					    			<div className="col-md-4">
-					    				<img src={emailInformation.email.find((element) => element.id === parseFloat(e.to)).avatar} className="mt-2 rounded-circle mr-1 float-left" width = '60' height = '60'/>
+					    				<img src={emailInformation.email.find((element) => element.id === parseFloat(e.to)).avatar} alt={emailInformation.email.find((element) => element.id === parseFloat(e.to)).avatar} className="mt-2 rounded-circle mr-1 float-left" width = '60' height = '60'/>
 					    				<p className="text-uppercase mt-3">{emailInformation.email.find((element) => element.id === parseFloat(e.to)).name} {emailInformation.email.find((element) => element.id === parseFloat(e.to)).last_name}</p>
 					    				<br/>
-					    				<img src={emailInformation.email.find((element) => element.id === parseFloat(e.from)).avatar} className="mt-2 rounded-circle mr-1 float-left" width = '60' height = '60'/>
+					    				<img src={emailInformation.email.find((element) => element.id === parseFloat(e.from)).avatar} alt={emailInformation.email.find((element) => element.id === parseFloat(e.from)).avatar} className="mt-2 rounded-circle mr-1 float-left" width = '60' height = '60'/>
 					    				<p className="text-uppercase mt-3">{emailInformation.email.find((element) => element.id === parseFloat(e.from)).name} {emailInformation.email.find((element) => element.id === parseFloat(e.from)).last_name}</p>
 					    			</div>
 					    			<div className="col-md-8">

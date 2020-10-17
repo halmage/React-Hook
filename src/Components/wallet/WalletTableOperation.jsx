@@ -5,7 +5,7 @@ import WalletListOperation from './WalletListOperation';
 const WalletTableOperation = ({wallet}) => {
   return (
     <>    	
-   		<table class="table table-striped mt-3 text-center">
+   		<table className="table table-striped mt-3 text-center">
 		  <thead>
 		    <tr>
 		      <th scope="col">operación</th>

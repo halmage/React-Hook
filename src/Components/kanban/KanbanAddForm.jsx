@@ -11,7 +11,7 @@ const KanbanAddForm = ({onAddSubmit}) => {
     		</div>
     		<div className="card-body">
 		    	<form onSubmit={handleSubmit(onAddSubmit)}>
-				  <div class="form-group">
+				  <div className="form-group">
 				    <label>Ingrese titulo</label>
 				    <input type="text" 
 				    	   className="form-control" 
@@ -28,7 +28,7 @@ const KanbanAddForm = ({onAddSubmit}) => {
 			        	{errors?.title?.message}
 			    	</span>
 				  </div>
-				  <div class="form-group">
+				  <div className="form-group">
 				    <label>Ingrese contenido</label>
 				    <input type="text" 
 				    	   className="form-control" 
@@ -65,7 +65,7 @@ const KanbanAddForm = ({onAddSubmit}) => {
 			        	{errors?.priority?.message}
 			    	</span>
 				  </div>
-				  <div class="form-group">
+				  <div className="form-group">
 				    <label>Ingrese usuario</label>
 				    <input type="text" 
 				    	   className="form-control" 
@@ -83,7 +83,7 @@ const KanbanAddForm = ({onAddSubmit}) => {
 			    	</span>
 				  </div>
 				  <div>
-				  	<button type="submit" class="btn btn-block btn-dark">confirmar</button>
+				  	<button type="submit" className="btn btn-block btn-dark">confirmar</button>
 				  </div>
 				</form>
     		</div>

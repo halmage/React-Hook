@@ -20,7 +20,7 @@ const KanbanEditForm = ({currentKanban,onUpdateSubmit}) => {
     		</div>
     		<div className="card-body">
 		    	<form onSubmit={handleSubmit(onUpdateSubmit)}>
-				  <div class="form-group">
+				  <div className="form-group">
 				    <label>Ingrese titulo</label>
 				    <input type="text" 
 				    	   className="form-control" 
@@ -37,7 +37,7 @@ const KanbanEditForm = ({currentKanban,onUpdateSubmit}) => {
 			        	{errors?.title?.message}
 			    	</span>
 				  </div>
-				  <div class="form-group">
+				  <div className="form-group">
 				    <label>Ingrese contenido</label>
 				    <input type="text" 
 				    	   className="form-control" 
@@ -74,7 +74,7 @@ const KanbanEditForm = ({currentKanban,onUpdateSubmit}) => {
 			        	{errors?.priority?.message}
 			    	</span>
 				  </div>
-				  <div class="form-group">
+				  <div className="form-group">
 				    <label>Ingrese usuario</label>
 				    <input type="text" 
 				    	   className="form-control" 
@@ -92,7 +92,7 @@ const KanbanEditForm = ({currentKanban,onUpdateSubmit}) => {
 			    	</span>
 				  </div>
 				  <div>
-				  	<button type="submit" class="btn btn-block btn-dark">actualizar</button>
+				  	<button type="submit" className="btn btn-block btn-dark">actualizar</button>
 				  </div>
 				</form>
     		</div>

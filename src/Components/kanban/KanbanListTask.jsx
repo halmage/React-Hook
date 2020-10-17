@@ -5,9 +5,9 @@ const KanbanListTask = ({kanban,onClickDelete,editKanban}) => {
     <>
     	<div className="row">
 	    	{
-	    		kanban.map((k)=>{
+	    		kanban.map((k,i)=>{
 	    			return(
-	    				<div className="col-md-6">
+	    				<div key={i} className="col-md-6">
 		    				<div className="card mt-2">
 		    					<div className="card-header bg-dark text-light text-center">
 		    						<span>{k.title}</span>

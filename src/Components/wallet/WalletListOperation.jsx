@@ -2,7 +2,7 @@ import React from 'react';
 
 const WalletListOperation = ({wallet}) => {
   return (
-  	wallet.map((w)=>{
+  	wallet.map((w,i)=>{
   		return(
   			<>
 	  			<tr>

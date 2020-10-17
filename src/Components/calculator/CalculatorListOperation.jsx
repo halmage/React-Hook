@@ -3,10 +3,10 @@ const CalculatorListOperation = ({math}) => {
   return (
     <>
     	{
-			math.map((m) => {	
+			math.map((m,i) => {	
 				return(
-					<>					
-						<tr>
+					<>			
+						<tr key={i}>
 							<td>{m.number1}</td>
 							<td>{m.signo}</td>
 							<td>{m.number2}</td>
