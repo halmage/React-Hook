@@ -7,7 +7,7 @@ const EmailListUser = ({emailInformation}) => {
 			emailInformation.email.map((e) => {
 				return(
 					<>
-						<option value={e.id}>{e.name} {e.last_name}</option>
+						<option key={e.id} value={e.id}>{e.name} {e.last_name}</option>
 					</>
 				)
 			})
